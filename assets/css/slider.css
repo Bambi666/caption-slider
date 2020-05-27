@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+
+
+input {
+    position: absolute;
+    margin-top: 95vh;
+    opacity: 0;
+}
+
+label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: solid 2px white;
+    border-radius: 100%;
+    background-color: transparent;
+    margin: 95vh 5px 0 5px;
+    z-index: 50;
+    transition-duration: 0.5s background-color;
+    cursor: pointer;
+
+}
+
+input:checked+label {
+    background-color: white;
+}
+
+.apla {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    width: 100%;
+}
+
+.apla p {
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 30px;
+    margin: 0 0 50px 0;
+}
+
+.slider {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition-duration: 0.5s;
+    opacity: 1;
+
+}
+
+input:checked~.slider {
+    transform: translateX(100%);
+}
+
+input:checked+label+.slider {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.image1 {
+    background-image: url("../images/launch-pad-67645_1920.jpg");
+}
+
+.image2 {
+    background-image: url("../images/rocket-launch-67723_1920.jpg");
+}
+
+.image3 {
+    background-image: url("../images/nasa-1640510_1920.jpg");
+}
+
+.image4 {
+    background-image: url("../images/nasa-1640513_1920.jpg");
+}
